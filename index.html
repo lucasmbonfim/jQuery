@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Lucas Moraes Bonfim e Joao Vitor e Silva -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade</title>
+  <style>
+    #movido {
+      position: absolute;
+      width: 250px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #imgPosition {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Atividade jQuery</h1>
+  <button id="esquerda">Para a esquerda</button>
+  <br>
+  <button id="direita">Para a direita</button>
+  <br>
+  <button id="cima">Para cima</button>
+  <br>
+  <button id="baixo">Para baixo</button>
+  <div id="imgPosition">
+    <img src="img/caracol.png.png" id="movido">
+  </div>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    $("#esquerda").click(function () {
+      $("#movido").animate({ "left": "-=20px" }, "slow")
+    })
+    $("#direita").click(function () {
+      $("#movido").animate({ "left": "+=20px" }, "slow")
+    })
+    $("#cima").click(function () {
+      $("#movido").animate({ "top": "-=20px" }, "slow")
+    })
+    $("#baixo").click(function () {
+      $("#movido").animate({ "top": "+=20px" }, "slow")
+    })
+  </script>
+</body>
+
+</html>
